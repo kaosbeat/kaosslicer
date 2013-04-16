@@ -1,0 +1,23 @@
+#N canvas 544 149 288 350 10;
+#X obj 14 127 inlet~;
+#X obj 12 37 vsl 10 50 0 127 0 0 empty empty cut 0 -9 0 10 -4034 -1
+-1 0 1;
+#X obj 61 38 vsl 10 50 1 4 0 0 empty empty gain 0 -9 0 10 -4032 -1
+-1 0 1;
+#X obj 14 244 outlet~;
+#X obj 14 212 *~ 1;
+#X obj 15 174 vcf~;
+#X obj 60 151 sig~;
+#X obj 64 124 mtof;
+#X obj 36 37 vsl 10 50 0.01 10 0 0 empty empty rez 0 -9 0 10 -260097
+-1 -1 0 1;
+#X text 91 175 bandpass filter;
+#X connect 0 0 5 0;
+#X connect 1 0 7 0;
+#X connect 2 0 4 1;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 5 2;
+#X coords 0 -1 1 1 100 100 1 0 0;
