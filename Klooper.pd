@@ -1,4 +1,4 @@
-#N canvas 644 36 1042 1031 10;
+#N canvas 2302 -43 1042 1031 10;
 #X obj 6 -86 loadbang;
 #X obj 7 -57 f \$1;
 #X obj 333 18 soundfiler;
@@ -69,7 +69,7 @@
 #X obj 341 522 t b b;
 #X obj 399 742 t b b;
 #X obj 107 122 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 195 111 hradio 8 1 0 4 empty empty empty 0 -8 0 10 -1 -262144
 -1 0;
 #X obj 252 -78 r masterclock;
@@ -140,11 +140,10 @@
 #X msg 255 672 sr \$1;
 #X floatatom 387 533 5 0 0 0 - - -;
 #X obj 839 640 spigot;
-#X obj 601 525 select 0;
-#X obj 600 566 t b b;
+#X obj 508 429 t b b;
 #X msg 454 491 0;
-#X obj 438 414 / 8;
-#N canvas 847 364 987 836 offset 1;
+#X obj 467 389 / 8;
+#N canvas 2640 76 987 836 offset 0;
 #X obj 104 -71 inlet;
 #X text 181 14 offset;
 #X text 156 181 counts from offset onwards \, respecting the beat clock
@@ -173,15 +172,14 @@
 #X obj 29 441 puma.led.toggle \$2 3 2 4;
 #X msg 29 414 clear;
 #X obj 104 -40 t f b f;
-#X obj 225 -71 inlet;
 #X obj 207 396 / 1;
 #X obj 239 80 / 8;
-#X floatatom 223 439 5 0 0 0 - - -;
+#X floatatom 340 534 5 0 0 0 - - -;
 #X obj 239 54 f \$1;
-#X obj 246 -19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 52 43 * 1;
 #X floatatom 31 79 5 0 0 0 - - -;
+#X obj 245 -51 loadbang;
+#X obj 377 536 outlet;
 #X connect 0 0 24 0;
 #X connect 3 0 19 0;
 #X connect 3 0 16 2;
@@ -202,23 +200,24 @@
 #X connect 15 0 21 0;
 #X connect 16 0 20 0;
 #X connect 17 0 16 0;
-#X connect 20 0 26 0;
+#X connect 20 0 25 0;
 #X connect 22 0 7 0;
 #X connect 23 0 22 1;
 #X connect 24 0 8 0;
 #X connect 24 1 15 0;
 #X connect 24 1 23 0;
-#X connect 24 2 31 0;
-#X connect 26 0 8 0;
-#X connect 26 0 28 0;
-#X connect 27 0 26 1;
-#X connect 27 0 31 1;
-#X connect 29 0 3 1;
-#X connect 29 0 14 1;
-#X connect 29 0 27 0;
-#X connect 30 0 29 0;
-#X connect 31 0 32 0;
-#X connect 31 0 10 0;
+#X connect 24 2 29 0;
+#X connect 25 0 8 0;
+#X connect 25 0 27 0;
+#X connect 25 0 32 0;
+#X connect 26 0 25 1;
+#X connect 26 0 29 1;
+#X connect 28 0 3 1;
+#X connect 28 0 14 1;
+#X connect 28 0 26 0;
+#X connect 29 0 30 0;
+#X connect 29 0 10 0;
+#X connect 31 0 28 0;
 #X restore 415 236 pd offset;
 #X obj 499 158 r seqsyncoff-\$2;
 #X obj 498 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -233,8 +232,8 @@
 #X connect 4 0 3 0;
 #X connect 5 0 6 0;
 #X connect 5 0 85 1;
+#X connect 5 0 91 0;
 #X connect 5 0 92 0;
-#X connect 5 0 93 0;
 #X connect 7 0 8 0;
 #X connect 8 0 24 0;
 #X connect 10 0 67 0;
@@ -308,14 +307,15 @@
 #X connect 82 1 81 1;
 #X connect 83 0 15 3;
 #X connect 85 0 56 0;
+#X connect 85 0 89 0;
 #X connect 86 0 10 1;
 #X connect 87 0 16 0;
-#X connect 89 0 90 0;
-#X connect 90 0 56 0;
-#X connect 90 1 91 0;
-#X connect 91 0 18 0;
-#X connect 92 0 55 0;
+#X connect 89 0 56 0;
+#X connect 89 1 90 0;
+#X connect 90 0 18 0;
+#X connect 91 0 55 0;
+#X connect 92 0 85 0;
+#X connect 93 0 94 0;
 #X connect 94 0 95 0;
-#X connect 95 0 96 0;
-#X connect 96 0 81 1;
+#X connect 95 0 81 1;
 #X coords 0 -1 1 1 150 80 1 100 100;

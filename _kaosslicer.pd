@@ -1,11 +1,11 @@
-#N canvas 417 386 1193 614 10;
+#N canvas 406 497 1193 614 10;
 #X declare -path rj;
 #X declare -path puma;
 #X declare -path puma;
 #X floatatom 19 73 5 60 240 2 BPM - bpm;
 #X obj 16 4 loadbang;
 #X obj 17 34 f 120;
-#X obj 390 6 Kseq;
+#X obj 391 6 Kseq;
 #X obj 78 4 declare -path rj;
 #X obj 7 130 adc~;
 #X obj 2 433 dac~;
@@ -39,10 +39,10 @@
 #X obj 643 53 monomelogic;
 #X msg 76 47 60;
 #X msg 107 49 240;
+#X obj 4 199 Klooper 32 0;
 #X obj 159 199 Klooper 16 1;
 #X obj 312 199 Klooper 8 2;
 #X obj 466 199 Klooper 8 3;
-#X obj 4 199 Klooper 32 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 5 0 36 0;
@@ -79,5 +79,5 @@
 #X connect 35 0 0 0;
 #X connect 36 0 6 0;
 #X connect 37 0 6 0;
-#X connect 38 0 21 0;
-#X connect 39 0 6 0;
+#X connect 38 0 6 0;
+#X connect 39 0 21 0;
