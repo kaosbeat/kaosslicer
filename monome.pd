@@ -23,8 +23,8 @@
 #X obj 530 -70 list prepend send;
 #X obj 530 -45 list trim;
 #X obj 530 -117 OSCprepend /grid;
-#X obj 218 -121 udpreceive 21339;
 #X msg 497 62 send /monome/grid/led/set 1 1 0;
+#X obj 218 -121 udpreceive 21339;
 #X connect 2 0 10 0;
 #X connect 2 0 15 0;
 #X connect 3 0 2 0;
@@ -43,6 +43,6 @@
 #X connect 19 0 20 0;
 #X connect 20 0 7 0;
 #X connect 21 0 18 0;
-#X connect 22 0 8 0;
-#X connect 23 0 7 0;
+#X connect 22 0 7 0;
+#X connect 23 0 8 0;
 #X coords 0 -1 1 1 120 40 1 200 50;

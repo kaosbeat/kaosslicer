@@ -1,4 +1,4 @@
-#N canvas 528 365 1235 821 10;
+#N canvas 445 229 1235 821 10;
 #X declare -path rj;
 #X declare -path puma;
 #X declare -path puma;
@@ -18,7 +18,7 @@
 #X msg 107 49 240;
 #X obj 668 202 demux~;
 #X obj 184 4 declare -path mikrokosmos;
-#N canvas 879 183 801 631 effect3 1;
+#N canvas 879 183 801 631 effect3 0;
 #X obj 28 -100 inlet~;
 #X obj 15 268 outlet~;
 #X obj 124 269 outlet~;
@@ -111,6 +111,8 @@
 #X restore 817 96 pd samplebank;
 #X obj 4 199 Klooper 8 0;
 #X obj 159 199 Klooper 8 1;
+#X obj 501 425 Ksamplerecorder;
+#X obj 475 514;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 5 0 17 0;
