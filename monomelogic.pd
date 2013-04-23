@@ -1,4 +1,4 @@
-#N canvas 842 22 838 1006 10;
+#N canvas 399 34 838 1006 10;
 #X declare -path puma;
 #X obj 39 71 r monome.press;
 #X obj 88 14 declare -path puma;
@@ -46,7 +46,7 @@
 #X obj 175 650 s seqsync-1;
 #X obj 167 585 f 1;
 #X obj 317 550 t b b;
-#X obj 327 591 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 327 591 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 288 622 pack f f;
 #X obj 288 550 f 0;
@@ -64,6 +64,8 @@
 #X obj 378 489 r seqsyncoff-3;
 #X obj 383 586 f 3;
 #X obj 391 651 s seqsync-3;
+#X obj 772 117 puma.press.mono 8 0 1 8;
+#X obj 770 150 s sampler-0;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
@@ -73,6 +75,7 @@
 #X connect 0 0 15 0;
 #X connect 0 0 16 0;
 #X connect 0 0 17 0;
+#X connect 0 0 60 0;
 #X connect 3 0 2 0;
 #X connect 4 0 9 0;
 #X connect 5 0 10 0;
@@ -132,3 +135,4 @@
 #X connect 56 1 55 0;
 #X connect 57 0 56 0;
 #X connect 58 0 54 0;
+#X connect 60 0 61 0;

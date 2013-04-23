@@ -1,4 +1,4 @@
-#N canvas 895 192 912 731 10;
+#N canvas 768 192 912 731 10;
 #X obj -230 138 openpanel;
 #X text -190 86 load a file from the hard drive;
 #X obj -271 88 inlet;
@@ -33,10 +33,11 @@
 #X obj -227 603 outlet~;
 #X obj 116 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 133 149 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 133 149 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -147 566 spigot;
 #X obj -226 493 pack 1 1 1 0 2000;
+#X obj 780 160 s sampler-0;
 #X connect 0 0 7 1;
 #X connect 0 0 9 0;
 #X connect 2 0 14 0;
