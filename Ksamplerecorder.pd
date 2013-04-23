@@ -44,6 +44,9 @@
 #X obj 174 0 ctlin 46;
 #X obj 93 74 spigot;
 #X obj 268 0 ctlin \$1;
+#X obj 264 28 select 0;
+#X text 322 29 stop recording when unarming;
+#X msg 263 52 0;
 #X connect 0 0 4 0;
 #X connect 4 0 13 0;
 #X connect 4 0 22 1;
@@ -84,3 +87,6 @@
 #X connect 38 0 35 0;
 #X connect 39 0 4 0;
 #X connect 40 0 39 1;
+#X connect 40 0 41 0;
+#X connect 41 0 43 0;
+#X connect 43 0 4 0;
