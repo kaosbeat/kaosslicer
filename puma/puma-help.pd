@@ -9,13 +9,13 @@
 #X obj 35 251 tgl 15 0 puma.led.slider-vis puma.led.slider-vis-r PUMA.LED.SLIDER
 18 8 1 11 -262144 -1 -1 0 1;
 #X obj 35 271 tgl 15 0 puma.led.toggle-vis puma.led.toggle-vis-r PUMA.LED.TOGGLE
-18 8 1 11 -262144 -1 -1 1 1;
+18 8 1 11 -262144 -1 -1 0 1;
 #X obj 235 191 tgl 15 0 puma.press.mono-vis puma.press.mono-vis-r PUMA.PRESS.MONO
 18 8 1 11 -262144 -1 -1 0 1;
 #X obj 235 211 tgl 15 0 puma.press.repeat-vis puma.press.repeat-vis-r
 PUMA.PRESS.REPEAT 18 8 1 11 -262144 -1 -1 0 1;
 #X obj 235 231 tgl 15 0 puma.press.switch-vis puma.press.switch-vis-r
-PUMA.PRESS.SWITCH 18 8 1 11 -262144 -1 -1 1 1;
+PUMA.PRESS.SWITCH 18 8 1 11 -262144 -1 -1 0 1;
 #N canvas 0 22 494 329 helpfiles 0;
 #N canvas 602 58 647 365 puma.led.mono.help 0;
 #X obj 29 309 s monome.led;
@@ -48,11 +48,11 @@ last led lighten up \, a "redraw" messages draws it back.;
 #X connect 14 0 1 0;
 #X connect 14 0 0 0;
 #X restore 29 121 pd puma.led.mono.help;
-#N canvas 88 421 656 603 puma.led.blink.help 0;
+#N canvas 167 311 656 603 puma.led.blink.help 0;
 #X obj 39 532 s monome.led;
 #X obj 66 508 print;
 #X obj 168 347 metro 50;
-#X obj 168 328 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 168 328 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 168 368 i 0;
 #X obj 198 368 + 1;
@@ -239,27 +239,25 @@ whole slider \, a "redraw" message will draw the value back.;
 #X connect 16 0 0 0;
 #X connect 16 0 1 0;
 #X restore 29 211 pd puma.led.slider.help;
-#N canvas 36 479 636 472 puma.led.toggle.help 1;
+#N canvas 36 479 636 472 puma.led.toggle.help 0;
 #X obj 29 409 s monome.led;
 #X obj 56 385 print;
-#X msg 211 286 clear;
+#X msg 211 287 clear;
 #X text 113 403 this sends to puma.connect \, though man can connect
 to the monome in another way.;
-#X floatatom 63 90 5 0 4 0 - - -;
+#X floatatom 61 86 5 0 16 0 - - -;
 #X text 168 189 You can reset it's coords by sending a "coords" message
 to the left inlet following by the 4 standard coordinates values.;
 #X text 28 22 PURPOSE/BEHAVIOUR:;
 #X text 74 155 sending an int to the left inlet will display the slider's
 value accordingly.;
-#X msg 211 266 redraw;
+#X msg 214 262 redraw;
 #X text 239 277 a "clear" message at the right inlet will clear the
 whole slider \, a "redraw" message will draw it back;
 #X text 78 327 creation arguments: start_x \, start_y \, width \, height
 ;
 #X floatatom 99 90 1 0 4 0 - - -;
-#X msg 57 195 coords 5 3 2 2;
 #X msg 67 215 coords 3 3 2 2;
-#X msg 77 235 coords 1 1 2 2;
 #X msg 87 255 coords 1 4 2 2;
 #X text 121 89 left: index \, right: state;
 #X text 143 21 toggles leds state. It's main purpose is to keep the
@@ -268,19 +266,21 @@ leds states in memory for display clearing/drawing back.;
 #X obj 29 140 pack f f;
 #X msg 23 90 bang;
 #X obj 29 284 puma.led.toggle 4 3 2 4;
-#X connect 2 0 21 1;
-#X connect 4 0 18 1;
-#X connect 8 0 21 1;
-#X connect 11 0 19 1;
-#X connect 12 0 21 0;
-#X connect 13 0 21 0;
-#X connect 14 0 21 0;
-#X connect 15 0 21 0;
-#X connect 18 0 19 0;
-#X connect 19 0 21 0;
-#X connect 20 0 18 0;
-#X connect 21 0 0 0;
-#X connect 21 0 1 0;
+#X msg 77 235 coords 0 7 16 1;
+#X msg 57 195 coords 6 7 1 1;
+#X connect 2 0 19 1;
+#X connect 4 0 16 1;
+#X connect 8 0 19 1;
+#X connect 11 0 17 1;
+#X connect 12 0 19 0;
+#X connect 13 0 19 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 16 0;
+#X connect 19 0 0 0;
+#X connect 19 0 1 0;
+#X connect 20 0 19 0;
+#X connect 21 0 19 0;
 #X restore 29 241 pd puma.led.toggle.help;
 #N canvas 628 61 549 346 puma.press.mono.help 0;
 #X obj 28 91 r monome.press;
