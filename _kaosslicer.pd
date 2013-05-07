@@ -1,4 +1,4 @@
-#N canvas 294 75 1103 800 10;
+#N canvas 342 85 1103 800 10;
 #X declare -path rj;
 #X declare -path puma;
 #X declare -path puma;
@@ -78,8 +78,8 @@
 #X obj 75 142 adc~ 8;
 #X text -267 6 If monome does not work lsof -i -P |grep 21339;
 #X obj -256 268 *~ 0.2;
-#X obj -264 430 Ksamplerecorder 8 1;
 #X obj -132 429 Ksamplerecorder 8 2;
+#X obj -264 430 Ksamplerecorder 8 1;
 #X obj 132 429 Ksamplerecorder 8 4;
 #X obj 3 428 Ksamplerecorder 8 3;
 #X obj 263 428 Ksamplerecorder 8 5;
@@ -113,10 +113,12 @@
 #X connect 38 0 44 0;
 #X connect 38 0 45 0;
 #X connect 38 0 46 0;
-#X connect 39 0 48 0;
-#X connect 40 0 49 0;
-#X connect 40 1 49 1;
+#X connect 39 0 49 0;
+#X connect 39 1 49 1;
+#X connect 40 0 48 0;
+#X connect 40 1 48 1;
 #X connect 42 0 47 0;
-#X connect 47 0 26 0;
+#X connect 42 1 47 1;
+#X connect 47 4 26 0;
 #X connect 48 4 26 0;
 #X connect 49 4 26 0;

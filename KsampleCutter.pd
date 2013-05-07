@@ -62,7 +62,7 @@
 #X obj 906 84 - 1;
 #X floatatom 914 126 5 0 0 0 - - -;
 #X obj 831 78 t b f;
-#X floatatom 175 158 5 0 0 0 - - -;
+#X floatatom 157 142 5 0 0 0 - - -;
 #X text 250 111 gridlength;
 #X text 241 142 roundto;
 #X floatatom 211 192 5 0 0 0 - - -;
@@ -99,6 +99,11 @@
 #X msg 13 219 0;
 #X obj 30 299 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 746 73 select 7;
+#X obj 748 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 127 208 / 1;
+#X text 668 136 this should do the full loop basta!;
 #X connect 0 0 27 0;
 #X connect 0 1 26 0;
 #X connect 1 0 38 1;
@@ -161,6 +166,7 @@
 #X connect 49 1 56 1;
 #X connect 49 1 78 0;
 #X connect 49 1 72 0;
+#X connect 49 1 94 0;
 #X connect 51 0 47 0;
 #X connect 52 0 48 0;
 #X connect 52 1 56 0;
@@ -183,6 +189,7 @@
 #X connect 66 0 67 0;
 #X connect 66 0 71 1;
 #X connect 66 0 87 1;
+#X connect 66 0 96 1;
 #X connect 67 0 62 0;
 #X connect 67 0 64 0;
 #X connect 69 0 70 0;
@@ -210,8 +217,10 @@
 #X connect 87 0 88 0;
 #X connect 87 0 91 1;
 #X connect 89 0 87 0;
-#X connect 90 0 42 0;
+#X connect 90 0 96 0;
 #X connect 91 0 92 0;
 #X connect 92 0 86 1;
 #X connect 92 0 93 0;
 #X connect 93 0 22 0;
+#X connect 94 0 95 0;
+#X connect 96 0 42 0;
