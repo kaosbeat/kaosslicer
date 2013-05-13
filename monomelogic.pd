@@ -1,4 +1,4 @@
-#N canvas 144 141 1042 827 10;
+#N canvas 423 86 1042 827 10;
 #X declare -path puma;
 #X obj 39 71 r monome.press;
 #X obj 88 14 declare -path puma;
@@ -17,7 +17,7 @@
 #X obj 509 178 puma.press.mono 7 4 1 4;
 #X obj 505 249 s slicecontrol-2;
 #X obj 518 271 s slicecontrol-3;
-#X obj 234 735 s monome.led;
+#X obj 718 727 s monome.led;
 #X obj 421 517 select 2;
 #X obj 49 585 f 0;
 #X obj 313 518 select 2;
@@ -64,6 +64,10 @@
 #X obj 770 150 s sampler-0;
 #X obj 38 126 puma.press.mono 0 0 1 8;
 #X obj 179 270 print;
+#X text 762 636 FASTER;
+#X obj 852 596 r masterclock;
+#X obj 728 678 puma.led.blink 15 7 1 1;
+#X msg 730 636 0 2;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
@@ -128,3 +132,6 @@
 #X connect 54 0 50 0;
 #X connect 56 0 57 0;
 #X connect 58 0 6 0;
+#X connect 61 0 62 1;
+#X connect 62 0 17 0;
+#X connect 63 0 62 0;
