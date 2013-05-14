@@ -81,6 +81,7 @@
 #X obj -207 140 adc~ 8;
 #X obj -49 566 *~ 0.1;
 #X obj -3 534;
+#X obj -243 503 Keffects 1;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 8 0 0 0;
@@ -108,3 +109,4 @@
 #X connect 37 4 40 0;
 #X connect 38 4 19 0;
 #X connect 39 0 28 0;
+#X connect 42 0 19 0;
