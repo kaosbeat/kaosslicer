@@ -1,4 +1,4 @@
-#N canvas 157 323 1313 625 10;
+#N canvas 580 222 1313 625 10;
 #X declare -path puma;
 #X text -145 -35 bang to start/stop;
 #X obj 0 373 outlet;
@@ -50,7 +50,7 @@
 #X obj 95 -63 r monome.press;
 #X obj 192 -63 declare -path puma;
 #X text 232 483 VU-meter;
-#X obj 599 150 puma.press.mono 0 7 16 1;
+#X obj 592 152 puma.press.mono 0 7 16 1;
 #X obj 663 231 select 2;
 #X obj 666 263 t b b;
 #X obj 687 301 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -64,26 +64,26 @@
 -1 -1;
 #X obj 386 360 pack f 7 1 1;
 #X obj 625 300 f 0;
-#X obj 571 463 puma.led.blink 0 7 1 1;
+#X obj 567 470 puma.led.blink 0 7 1 1;
 #X obj 695 415 metro 50;
 #X obj 695 396 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 695 436 i 0;
 #X obj 725 436 + 1;
 #X obj 729 354 r mspb;
-#X msg 581 423 0 2;
-#X msg 611 422 0 0;
+#X msg 577 430 0 2;
+#X msg 607 429 0 0;
 #X obj 569 386 select 1;
 #X obj 729 384 / 8;
-#X msg 548 422 0 8;
+#X msg 544 429 0 8;
 #X obj 793 150 puma.press.mono 0 0 16 1;
 #X text 951 147 rec;
 #X obj 792 199 select 0;
-#X obj 793 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 793 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj -139 372 spigot;
 #X text -167 390 VUmeter off when unarmed;
-#X text 577 482 rec-Arm-indicator;
+#X text 573 489 rec-Arm-indicator;
 #X obj -96 100 f 0;
 #X msg 98 171 info;
 #X obj 82 143 t b b;
@@ -91,10 +91,11 @@
 #X obj 54 482 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 13 520 s recstop-\$2;
-#X obj 841 369 select 0;
+#X obj 808 348 select 0;
 #X obj 813 421 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -169 523 s seqstop-\$2;
+#X obj -164 457 s seqstop-\$2;
+#X obj 656 12 KsamplerecorderRR;
 #X connect 2 0 5 0;
 #X connect 2 0 13 1;
 #X connect 3 0 6 0;
