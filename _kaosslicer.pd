@@ -1,8 +1,9 @@
-#N canvas 381 27 1080 949 10;
+#N canvas 381 163 1080 949 10;
 #X declare -path rj;
 #X declare -path puma;
 #X declare -path puma;
 #X declare -path mikrokosmos;
+#X declare -path puma;
 #X declare -path puma;
 #X declare -path puma;
 #X declare -path puma;
@@ -82,6 +83,8 @@
 #X obj 412 515 Keffects 6;
 #X obj 284 509 Keffects 5;
 #X msg 143 48 120;
+#X obj -4 274 KsamplerecorderRR;
+#X obj 498 694 Krec 8 1;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 8 0 0 0;
@@ -110,6 +113,7 @@
 #X connect 24 0 20 0;
 #X connect 24 0 21 0;
 #X connect 24 0 22 0;
+#X connect 24 0 45 0;
 #X connect 25 4 27 0;
 #X connect 26 4 31 0;
 #X connect 27 0 29 0;
